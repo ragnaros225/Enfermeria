@@ -1,6 +1,6 @@
  function goToForm() {
             // Aquí puedes redirigir a tu formulario
-            window.location.href = 'Index.html';
+            window.location.href = 'index.html';
         }
         
         // Smooth scroll para navegación interna
