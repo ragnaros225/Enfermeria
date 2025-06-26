@@ -54,6 +54,55 @@
   text-align: center;
 }
 
+/* Fuentes referentes */
+.fuentes-referentes {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(118, 75, 162, 0.08);
+  padding: 32px 24px 24px 24px;
+}
+
+.fuentes-referentes h2 {
+  color: #764ba2;
+  margin-bottom: 18px;
+  font-size: 1.5em;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.fuentes-referentes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fuentes-referentes li {
+  margin-bottom: 14px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  background: #f7f5fa;
+}
+
+.fuentes-referentes li:hover {
+  background: #ece6f6;
+}
+
+.fuentes-referentes a {
+  color: #4b2991;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  word-break: break-all;
+}
+
+.fuentes-referentes a:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   #pdfCanvas {
