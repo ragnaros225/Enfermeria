@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consecuencias de la Anemia</title>
+  <link rel="stylesheet" href="estilos/styles2.css">
+  <link rel="stylesheet" href="estilos/consecuencias.css">
+</head>
+<body>
+  <nav>
+    <a href="sintomas.html">Síntomas</a>
+    <a href="materna.html">Materna</a>
+    <a href="recetas.html">Recetas</a>
+    <a href="consecuencias.html" class="active">Consecuencias</a>
+  </nav>
+
+  <main>
+    <section class="contenido-textual">
+      <h1>Consecuencias de la Anemia</h1>
+      <p>Aquí va tu contenido sobre consecuencias, síntomas, etc.</p>
+    </section>
+
+    <!-- Visor de PDF -->
+    <div class="visor-pdf">
+      <canvas id="pdfCanvas"></canvas>
+      <div class="controles">
+        <button id="prevPage">Anterior</button>
+        <span id="pageCount">Página 1 de 0</span>
+        <button id="nextPage">Siguiente</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Librería PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script src="js/libro.js"></script>
+</body>
+</html>

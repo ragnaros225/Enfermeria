@@ -1,0 +1,281 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+nav a:hover, nav a.active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+    
+
+/* ===== TÍTULOS ===== */
+h2 {
+    color: #4b3fa7;
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* ===== TABLAS DE ALIMENTOS ===== */
+.tabla-scroll {
+    overflow-x: auto;
+    margin: 2rem auto;
+    max-width: 100%;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+}
+
+.tabla-alimentos {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    min-width: 600px;
+}
+
+.tabla-alimentos th, 
+.tabla-alimentos td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-alimentos th {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+.tabla-alimentos tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-alimentos .categoria {
+    background: #e0e7ff;
+    color: #4b3fa7;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.05em;
+    border-bottom: 2px solid #b3b3e6;
+}
+
+.tabla-alimentos tr:hover td {
+    background-color: #f5f7ff;
+}
+
+/* ===== TABLA NUTRICIONAL PROFESIONAL ===== */
+.tabla-nutricional {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(102,126,234,0.10);
+  padding: 1.5rem 2rem;
+}
+
+.tabla-nutricional table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla-nutricional th, 
+.tabla-nutricional td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla-nutricional th {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.08em;
+  border: none;
+}
+
+.tabla-nutricional tr:hover {
+  background-color: #f5f7ff;
+}
+
+.categoria h3 {
+  color: #4b3fa7;
+  margin-top: 2rem;
+  border-left: 4px solid #667eea;
+  padding-left: 12px;
+  font-size: 1.2em;
+  background: #f7f7fa;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* ===== LAYOUT CON IMÁGENES ===== */
+.tabla-categorias-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.tabla-side-img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tabla-side-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== NUEVAS CLASES ===== */
+.tabla-categorias-bloque {
+    margin: 2.5rem auto 3.5rem auto;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.tabla-ancha {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tabla-imgs-abajo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.2rem;
+}
+
+.tabla-img-abajo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(102,126,234,0.13);
+    background: #fff;
+    transition: transform 0.2s;
+}
+.tabla-img-abajo:hover {
+    transform: scale(1.04) rotate(-2deg);
+    box-shadow: 0 8px 28px rgba(102,126,234,0.18);
+}
+
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .tabla-categorias-row {
+        gap: 1.5rem;
+    }
+    
+    .tabla-side-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
+    
+    .tabla-categorias-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .tabla-side-img {
+        order: -1;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    
+    .tabla-alimentos th, 
+    .tabla-alimentos td {
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tabla-alimentos {
+        font-size: 0.85rem;
+    }
+}
+
