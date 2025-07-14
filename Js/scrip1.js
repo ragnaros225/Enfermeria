@@ -3,6 +3,7 @@ const form = document.getElementById('anemiaForm');
         const progressFill = document.getElementById('progressFill');
         const progressText = document.getElementById('progressText');
         const resultContainer = document.getElementById('resultContainer');
+        const progressCloud = document.getElementById('progressCloud');
         
         // Actualizar progreso
         function updateProgress() {
@@ -14,6 +15,17 @@ const form = document.getElementById('anemiaForm');
             progressText.textContent = `${answeredQuestions} de ${totalQuestions} preguntas respondidas`;
             
             submitBtn.disabled = answeredQuestions < totalQuestions;
+
+            // Mover la nube
+            if (progressCloud) {
+                const bar = progressFill.parentElement;
+                const wrapper = bar.parentElement;
+                const barWidth = bar.offsetWidth;
+                const cloudWidth = progressCloud.offsetWidth;
+                // La nube debe cubrir el borde derecho de la barra al 100%
+                const left = Math.max(0, Math.min(barWidth - cloudWidth / 2, (progress / 100) * barWidth - cloudWidth / 2));
+                progressCloud.style.left = left + 'px';
+            }
         }
         
         // Escuchar cambios en los radio buttons

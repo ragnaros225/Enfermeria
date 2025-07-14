@@ -1,0 +1,23 @@
+
+.intro-screen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #EEF4FE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s cubic-bezier(.4,2,.6,1);
+}
+.intro-video {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 18px;
+  background: #EEF4FE;
+  transition: all 0.2s linear;
+}
+
+
