@@ -56,7 +56,7 @@ const form = document.getElementById('anemiaForm');
             // Ocultar formulario y mostrar resultados
             form.style.display = 'none';
             resultContainer.style.display = 'block';
-            let extraBtn = `<button class="reset-btn" onclick="window.location.href='formulario.php'">Ver Síntomas</button>`;
+            let extraBtn = `<button class="reset-btn" onclick="window.location.href='sintomas.php'">Ver Síntomas</button>`;
 
 
             if (yesCount === 0) {
