@@ -16,7 +16,7 @@ $stmt->bind_param("issssss", $id_usuario, $signo, $consecuencias, $alimentos, $a
 
 if ($stmt->execute()) {
     // ✅ Redirige al formulario principal después de guardar
-    header("Location: formulario.html");
+    header("Location: formulario.php");
     exit;
 } else {
     echo "❌ Error: " . $stmt->error;

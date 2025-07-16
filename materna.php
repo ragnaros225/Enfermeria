@@ -3,20 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salud Materna, Futuro Seguro</title>
-  <link rel="stylesheet" href="estilos/styles2.css">
-  <link rel="stylesheet" href="estilos/materna.css">
-
-
+  <link rel="stylesheet" href="Estilos/global.css">
+  <link rel="stylesheet" href="Estilos/materna.css">
 </head>
 
 <body>
-  <nav>
-    <a href="sintomas.html">Síntomas</a>
-    <a href="materna.html" class="active">Materna</a>
-    <a href="recetas.html">Recetas</a>
-    <a href="consecuencias.html">Consecuencias</a>
-  </nav>
+  <?php include 'componentes/navbar.php'; ?>
   <main>
     <h2>Salud Materna, Futuro Seguro</h2>
     <img src="img/materna.jpg" alt="Salud materna" class="img-principal">

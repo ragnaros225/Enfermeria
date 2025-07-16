@@ -1,6 +1,6 @@
  function goToForm() {
             // Aquí puedes redirigir a tu formulario
-            window.location.href = 'index.html';
+            window.location.href = 'formulario.php';
         }
         
         // Smooth scroll para navegación interna
