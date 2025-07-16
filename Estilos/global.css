@@ -1,0 +1,129 @@
+:root {
+  --color-primary: #667eea;
+  --color-secondary: #764ba2;
+  --color-accent: #AEE9FF;
+  --color-bg: #f8f9fa;
+  --color-bg-dark: #e9ecef;
+  --color-white: #fff;
+  --color-black: #22223B;
+  --color-text: #333;
+  --color-card: #f7f7fa;
+  --color-shadow: rgba(102,126,234,0.10);
+  --radius-card: 20px;
+  --radius-img: 16px;
+  --radius-btn: 25px;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  --shadow-card: 0 2px 12px var(--color-shadow);
+  --shadow-btn: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+body {
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-dark) 100%);
+  min-height: 100vh;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.main-navbar {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  margin-bottom: 2rem;
+}
+
+.main-navbar a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-btn);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.main-navbar a:hover, .main-navbar a.active {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  background: var(--color-white);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+button, .btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-btn);
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-btn);
+  transition: background 0.2s, transform 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+input, select, textarea {
+  border: 1px solid #ccc;
+  border-radius: var(--radius-btn);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  border-radius: var(--radius-img);
+}
+
+@media (max-width: 800px) {
+  .container, .card {
+    padding: 1rem;
+  }
+  .main-navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .container, .card {
+    padding: 0.5rem;
+  }
+  button, .btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}

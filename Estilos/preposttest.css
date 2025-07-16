@@ -1,0 +1,222 @@
+/* Ajustes para imágenes laterales en pretest/posttest IGUAL a formulario.php */
+.formulario-imagenes-col {
+  gap: 64px !important;
+  min-width: 120px !important;
+  flex-basis: 160px !important;
+  max-width: 300px !important;
+  align-items: center !important;
+}
+.formulario-imagenes-col img {
+  width: 100% !important;
+  max-width: 100% !important;
+  filter: drop-shadow(0 4px 16px #AEE9FF55) !important;
+}
+.img-estetoscopio {
+  width: 240px !important;
+  max-width: 98vw !important;
+  align-self: center !important;
+  margin-top: 0 !important;
+}
+.img-frasco {
+  width: 300px !important;
+  max-width: 98vw !important;
+  align-self: center !important;
+  margin-bottom: 0 !important;
+}
+.img-vacuna {
+  width: 340px !important;
+  max-width: 98vw !important;
+  align-self: flex-start !important;
+  margin-left: -40px !important;
+}
+@media (max-width: 900px) {
+  .formulario-imagenes-col {
+    gap: 32px !important;
+    min-width: 60px !important;
+    flex-basis: 80px !important;
+    max-width: 120px !important;
+  }
+  .formulario-imagenes-col img {
+    width: 70px !important;
+    max-width: 100% !important;
+  }
+  .img-estetoscopio {
+    width: 70px !important;
+  }
+  .img-frasco {
+    width: 90px !important;
+  }
+  .img-vacuna {
+    width: 100px !important;
+  }
+}
+/* Estilos compartidos para pretest y posttest */
+.pretest-card-glass {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px #E0E7EF, 0 2px 16px #764BA220;
+  border: 2.5px solid #e0d7fa;
+  max-width: 720px;
+  width: 100%;
+  margin: 32px auto 32px auto;
+  padding: 38px 38px 32px 38px;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInCard 0.8s cubic-bezier(.4, 1.4, .6, 1);
+}
+
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pretest-title {
+  font-family: 'Fredoka', Arial, sans-serif;
+  color: #7c3aed;
+  font-size: 2.2em;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 0 2px 12px #e0d7fa80;
+}
+
+.pretest-desc {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.13em;
+  color: #444;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.pretest-card-glass .registro-fields {
+  width: 100%;
+  gap: 28px;
+}
+
+.pretest-card-glass .question {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #b2ebf255;
+  border-left: 5px solid #a78bfa;
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1.2px solid rgba(124, 58, 237, 0.10);
+  margin-bottom: 24px;
+  padding: 18px 32px 18px 56px;
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: box-shadow 0.2s, transform 0.2s;
+  animation: fadeInQuestion 0.7s cubic-bezier(.4, 1.4, .6, 1);
+}
+
+@keyframes fadeInQuestion {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pretest-card-glass .question:hover {
+  box-shadow: 0 8px 32px #a78bfa33, 0 2px 16px #764BA220;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.pretest-card-glass .question-number {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px #764BA220;
+  border: 2px solid #fff;
+  z-index: 1;
+}
+
+.pretest-card-glass .question-text {
+  font-size: 1.13em;
+  color: #22223B;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pretest-card-glass .options {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.pretest-card-glass select {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #a78bfa;
+  font-size: 1em;
+  background: #f7f4fd;
+  box-shadow: 0 1.5px 8px #a78bfa10;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.pretest-card-glass select:focus {
+  border: 2px solid #7c3aed;
+}
+
+.pretest-card-glass .submit-btn {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  color: #fff;
+  border: none;
+  padding: 15px 44px;
+  border-radius: 30px;
+  font-size: 1.13em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 18px;
+  box-shadow: 0 4px 16px #E0E7EF, 0 1.5px 8px #764BA210;
+  letter-spacing: 0.5px;
+}
+
+.pretest-card-glass .submit-btn:hover {
+  background: linear-gradient(90deg, #a78bfa, #7c3aed);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px #a78bfa33, 0 3px 16px #764BA220;
+}
+
+@media (max-width: 800px) {
+  .pretest-card-glass {
+    padding: 18px 4vw 18px 4vw;
+  }
+  .pretest-card-glass .question {
+    padding: 14px 8vw 14px 48px;
+  }
+}

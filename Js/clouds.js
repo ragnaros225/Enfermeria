@@ -1,4 +1,4 @@
-// Genera y anima nubes aleatorias en dos capas: detrás y delante del contenido
+//animar nubes aleatorias en dos capas: detrás y delante del contenido
 const cloudImages = [
   'Img/nube1.png',
   'Img/nube2.png',
@@ -8,7 +8,7 @@ const cloudImages = [
   'Img/nube6.png'
 ];
 
-const NUM_CLOUDS = 24; // Total de nubes (más poblado)
+const NUM_CLOUDS = 24;
 
 function randomBetween(a, b) {
   return Math.random() * (b - a) + a;

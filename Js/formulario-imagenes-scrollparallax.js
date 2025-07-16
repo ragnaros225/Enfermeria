@@ -6,29 +6,29 @@ function parallaxImagenesScroll() {
   const scrollY = window.scrollY || window.pageYOffset;
   const wh = window.innerHeight;
 
-  // Estetoscopio: baja suavemente
+  // Estetoscopio
   if (estetoscopio) {
     const base = 0;
-    const factor = 0.25; // velocidad
+    const factor = 0.25;
     const offset = Math.min(scrollY * factor, 120);
     estetoscopio.style.transform = `translateY(${base + offset}px) scale(1.12) rotate(-2deg)`;
     estetoscopio.style.opacity = 1;
     estetoscopio.style.filter = 'drop-shadow(0 8px 32px #AEE9FF99)';
   }
-  // Vacuna: baja suavemente (igual que estetoscopio)
+  // Vacuna
   if (vacuna) {
-    const base = -40; // Empieza más arriba
-    const factor = 0.22;
+    const base = -40;
+    const factor = 0.25;
     const offset = Math.min(scrollY * factor, 120);
     vacuna.style.transform = `translateY(${base + offset}px) scale(1.12) rotate(-2deg)`;
     vacuna.style.opacity = 1;
     vacuna.style.filter = 'drop-shadow(0 8px 32px #AEE9FF99)';
   }
-  // Frasco: sube más cuando el scroll es mayor
+  // Frasco
   if (frasco) {
     const frascoRect = frasco.getBoundingClientRect();
     const base = 0;
-    const factor = 0.18;
+    const factor = 0.25;
     let offset = 0;
     if (frascoRect.top < wh) {
       offset = Math.max((wh - frascoRect.top) * factor, 0);

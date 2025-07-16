@@ -111,13 +111,14 @@
   background: rgba(255,255,255,0.18);
   border-radius: 28px;
   box-shadow: 0 8px 32px #81d4fa55, 0 1.5px 8px #b2ebf255;
-  padding: 40px 32px 32px 32px;
+  padding: 64px 32px 32px 32px;
   max-width: 820px;
   width: 100%;
   margin: 0 12px;
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px) saturate(160%);
   border: 1.5px solid rgba(255,255,255,0.32);
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -194,18 +195,21 @@
   height: 32px;
   margin-bottom: 4px;
 }
+
 .progress-bar {
   position: absolute;
   left: 0;
+  right: 35px;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
   height: 14px;
   background: #e8edf3;
   border-radius: 12px;
   box-shadow: 0 1px 4px #26425A22;
   z-index: 1;
+  overflow: hidden;
 }
+
 .progress-fill {
   background: #26425A;
   height: 100%;
@@ -215,17 +219,21 @@
   left: 0;
   top: 0;
   z-index: 2;
+  max-width: 100%;
 }
+
 .progress-cloud {
   position: absolute;
+  margin-left: 23px;
   top: 50%;
   left: 0;
   width: 70px;
   height: 52px;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 5;
   pointer-events: none;
   transition: left 0.3s;
+  filter: drop-shadow(0 2px 4px rgba(38, 66, 90, 0.2));
 }
 
 /* Ajuste para el texto */
@@ -235,4 +243,41 @@
   text-align: right;
   margin-bottom: 2px;
   margin-top: 2px;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background: rgba(174, 233, 255, 0.25);
+  color: #26425A;
+  padding: 24px 32px;
+  border-radius: 24px;
+  margin: -48px auto 32px;
+  max-width: 90%;
+  box-shadow: 0 8px 32px #81d4fa55, 0 1.5px 8px #b2ebf255;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.header h1 {
+  margin: 0 0 12px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #26425A 0%, #2C7DA0 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(174, 233, 255, 0.2);
+}
+
+.header p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #26425A;
+  opacity: 0.85;
 }
