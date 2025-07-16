@@ -1,6 +1,7 @@
-<!-- sintomas.html -->
+<!-- sintomas.php -->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Síntomas de Anemia Infantil</title>
@@ -8,12 +9,13 @@
   <link rel="stylesheet" href="estilos/sintomas.css">
 
 </head>
+
 <body>
   <nav>
-    <a href="sintomas.html" class="active">Síntomas</a>
-    <a href="materna.html">Materna</a>
-    <a href="recetas.html">Recetas</a>
-    <a href="consecuencias.html">Consecuencias</a>
+    <a href="sintomas.php" class="active">Síntomas</a>
+    <a href="materna.php">Materna</a>
+    <a href="recetas.php">Recetas</a>
+    <a href="consecuencias.php">Consecuencias</a>
   </nav>
   <main>
     <h2>Signos y Síntomas de la Anemia Infantil</h2>
@@ -64,6 +66,7 @@
       <li>Consumir frutas preferiblemente enteras o picadas para aprovechar al máximo sus propiedades.</li>
     </ul>
   </main>
-    <script src="Js/posttest-button.js"></script>
+  <script src="Js/posttest-button.js"></script>
 </body>
+
 </html>

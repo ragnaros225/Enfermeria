@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detección Temprana de Anemia Infantil</title>
     <link rel="stylesheet" href="Estilos/styles.css">
+    <link rel="stylesheet" href="Estilos/formulario-imagenes.css">
 </head>
 <body>
     
-    <div class="container">
+    <div class="formulario-layout">
+      <div class="formulario-imagenes-col imagenes-izq">
+        <img src="Img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
+        <img src="Img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
+      </div>
+      <div class="container">
         <div class="header">
-            <h1>🩺 Detección Temprana de Anemia Infantil</h1>
-            <p>Responde las siguientes preguntas para identificar posibles señales de anemia en tu hijo(a)</p>
+            <h1>Detección Temprana de<br>Anemia Infantil</h1>
+            <p>Responde las siguientes preguntas para identificar<br>posibles señales de anemia en tu hijo(a)</p>
         </div>
-            
         <div class="form-container">
             <div class="progress-container">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <img src="Img/nube1.png" alt="Nube" class="progress-cloud" id="progressCloud">
                 </div>
                 <div class="progress-text" id="progressText">0 de 6 preguntas respondidas</div>
             </div>
-            
             <form id="anemiaForm">
                 <div class="question">
                     <div class="question-text">
@@ -129,17 +136,20 @@
                     Obtener Evaluación
                 </button>
             </form>
-            
             <div class="result-container" id="resultContainer">
                 <div class="result-title" id="resultTitle"></div>
                 <div class="result-description" id="resultDescription"></div>
                 <div class="recommendations" id="recommendations"></div>
                 <button class="reset-btn" onclick="resetForm()">Realizar Nueva Evaluación</button>
-                
             </div>
         </div>
+      </div>
+      <div class="formulario-imagenes-col imagenes-der">
+        <img src="Img/vacuna.png" alt="Vacuna" class="img-efecto img-vacuna">
+      </div>
     </div>
     
     <script src="Js/scrip1.js"></script>
+    <script src="Js/formulario-imagenes-scrollparallax.js"></script>
 </body>
 </html>

@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <title>Login Admin</title>
-  <style>
-    body { font-family: Arial; padding: 50px; background: #f2f2f2; }
-    form { background: white; padding: 20px; border-radius: 10px; max-width: 400px; margin: auto; }
-    input, button { width: 100%; padding: 10px; margin-top: 10px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Administrador</title>
+  <link rel="stylesheet" href="estilos/styles2.css">
+  <link rel="stylesheet" href="estilos/Index.css">
+  <link rel="stylesheet" href="estilos/registro.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <h2>Acceso Administrador</h2>
-  <form action="admin_verificar.php" method="post">
-    <input type="text" name="usuario" placeholder="Usuario" required>
-    <input type="password" name="contrasena" placeholder="Contraseña" required>
-    <button type="submit">Ingresar</button>
-  </form>
+  <div class="clouds-bg-back" id="clouds-bg-back"></div>
+  <div class="registro-wrapper">
+    <form class="registro-card" action="admin_verificar.php" method="POST">
+      <h1>Administrador</h1>
+      <div class="registro-fields">
+        <input type="text" name="usuario" placeholder="Usuario" required />
+        <input type="password" name="contrasena" placeholder="Contraseña" required />
+      </div>
+      <button type="submit">Ingresar</button>
+    </form>
+  </div>
+  <div class="clouds-bg-front" id="clouds-bg-front"></div>
+  <script src="Js/clouds.js"></script>
 </body>
+
 </html>
