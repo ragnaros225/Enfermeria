@@ -14,9 +14,9 @@
 <body>
   <div class="clouds-bg-back" id="clouds-bg-back"></div>
   <div class="registro-wrapper">
-    <form class="registro-card" action="admin_verificar.php" method="POST">
+    <form class="admin-login-card" action="admin_verificar.php" method="POST">
       <h1>Administrador</h1>
-      <div class="registro-fields">
+      <div class="admin-login-fields">
         <input type="text" name="usuario" placeholder="Usuario" required />
         <input type="password" name="contrasena" placeholder="Contraseña" required />
       </div>
