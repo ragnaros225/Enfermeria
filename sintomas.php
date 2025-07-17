@@ -66,7 +66,7 @@
       <li>Consumir frutas preferiblemente enteras o picadas para aprovechar al máximo sus propiedades.</li>
     </ul>
   </main>
-  <script src="Js/posttest-button.js"></script>
+  <script src="js/posttest-button.js"></script>
 </body>
 
 </html>

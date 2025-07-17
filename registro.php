@@ -58,8 +58,8 @@
         </form>
     </div>
     <div class="clouds-bg-front" id="clouds-bg-front"></div>
-    <script src="Js/clouds.js"></script>
-    <script src="Js/custom-select.js"></script>
+    <script src="js/clouds.js"></script>
+    <script src="js/custom-select.js"></script>
 </body>
 
 </html>

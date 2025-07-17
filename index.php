@@ -14,15 +14,15 @@
 <body>
   <div class="clouds-bg-back" id="clouds-bg-back"></div>
   <div id="intro-screen" class="intro-screen">
-    <video id="intro-video" src="Videos/intro bebe.mp4" autoplay muted playsinline class="intro-video" onended="showMainContent()"></video>
+    <video id="intro-video" src="videos/intro bebe.mp4" autoplay muted playsinline class="intro-video" onended="showMainContent()"></video>
     <div id="bienvenido-msg" class="bienvenido-msg">¡BIENVENIDO!</div>
   </div>
   <div id="main-content-wrapper" style="display:none;">
     <div class="bebe-apoyado-wrapper">
-      <img src="Img/bebe_apoyado.png" alt="Bebé apoyado" class="bebe-apoyado-img" />
+      <img src="img/bebe_apoyado.png" alt="Bebé apoyado" class="bebe-apoyado-img" />
     </div>
     <div class="container">
-      <img src="Img/logo_principl.jpg" alt="logo" />
+      <img src="img/logo_principl.jpg" alt="logo" />
       <h1>Formulario de la anemia</h1>
       <a href="registro.php">
         <button>Iniciar Evaluación</button>
@@ -42,9 +42,9 @@
     </div>
   </div>
   <div class="clouds-bg-front" id="clouds-bg-front"></div>
-  <script src="Js/intro.js"></script>
-  <script src="Js/showMainContent.js"></script>
-  <script src="Js/clouds.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/showMainContent.js"></script>
+  <script src="js/clouds.js"></script>
 
 </body>
 

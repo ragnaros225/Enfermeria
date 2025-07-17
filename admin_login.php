@@ -24,7 +24,7 @@
     </form>
   </div>
   <div class="clouds-bg-front" id="clouds-bg-front"></div>
-  <script src="Js/clouds.js"></script>
+  <script src="js/clouds.js"></script>
 </body>
 
 </html>

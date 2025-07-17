@@ -1,11 +1,11 @@
 //animar nubes aleatorias en dos capas: detrás y delante del contenido
 const cloudImages = [
-  'Img/nube1.png',
-  'Img/nube2.png',
-  'Img/nube3.png',
-  'Img/nube4.png',
-  'Img/nube5.png',
-  'Img/nube6.png'
+  'img/nube1.png',
+  'img/nube2.png',
+  'img/nube3.png',
+  'img/nube4.png',
+  'img/nube5.png',
+  'img/nube6.png'
 ];
 
 const NUM_CLOUDS = 24;

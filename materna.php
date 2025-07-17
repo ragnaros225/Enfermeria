@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salud Materna, Futuro Seguro</title>
-  <link rel="stylesheet" href="Estilos/global.css">
-  <link rel="stylesheet" href="Estilos/materna.css">
+  <link rel="stylesheet" href="estilos/global.css">
+  <link rel="stylesheet" href="estilos/materna.css">
 </head>
 
 <body>
@@ -97,7 +97,7 @@
       <img src="img/lactancia2.jpg" alt="Madre amamantando" class="materna-side-img">
     </div>
   </main>
-    <script src="Js/posttest-button.js"></script>
+    <script src="js/posttest-button.js"></script>
 </body>
 
 </html>

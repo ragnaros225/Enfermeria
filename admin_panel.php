@@ -25,7 +25,7 @@ $cuestionario2_data = $conn->query("SELECT cuestionarios2.*, usuarios.nombre FRO
 <head>
   <meta charset="UTF-8">
   <title>Panel de Administración</title>
-  <link rel="stylesheet" href="Estilos/admin_panel.css">
+  <link rel="stylesheet" href="estilos/admin_panel.css">
 </head>
 
 <body>
@@ -341,7 +341,7 @@ $cuestionario2_data = $conn->query("SELECT cuestionarios2.*, usuarios.nombre FRO
 </body>
 <!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="Js/admin_panel.js"></script>
+<script src="js/admin_panel.js"></script>
 <script>
   // --- DATOS DESDE PHP ---
   <?php

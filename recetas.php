@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Recetas Saludables para 30 Días</title>
-  <link rel="stylesheet" href="Estilos/global.css">
-  <link rel="stylesheet" href="Estilos/recetas.css">
+  <link rel="stylesheet" href="estilos/global.css">
+  <link rel="stylesheet" href="estilos/recetas.css">
 
 </head>
 
@@ -458,7 +458,7 @@
       </table>
     </div>
   </main>
-  <script src="Js/posttest-button.js"></script>
+  <script src="js/posttest-button.js"></script>
 </body>
 
 </html>

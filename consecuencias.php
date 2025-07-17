@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consecuencias de la Anemia</title>
-  <link rel="stylesheet" href="Estilos/global.css">
-  <link rel="stylesheet" href="Estilos/consecuencias.css">
+  <link rel="stylesheet" href="estilos/global.css">
+  <link rel="stylesheet" href="estilos/consecuencias.css">
 </head>
 
 <body>

@@ -26,15 +26,15 @@ $preguntas = [
 <head>
   <meta charset="UTF-8">
   <title>Cuestionario sobre Anemia</title>
-  <link rel="stylesheet" href="Estilos/formulario-imagenes.css">
-  <link rel="stylesheet" href="Estilos/preposttest.css">
+  <link rel="stylesheet" href="estilos/formulario-imagenes.css">
+  <link rel="stylesheet" href="estilos/preposttest.css">
 </head>
 
 <body style="background: linear-gradient(180deg, #AEE9FF 0%, #7EC8E3 60%, #B3D8F7 100%); margin: 0; padding: 20px;">
   <div class="formulario-layout" style="display: flex; min-height: calc(100vh - 40px); overflow: hidden;">
     <div class="formulario-imagenes-col imagenes-izq" style="flex-shrink: 0;">
-      <img src="Img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
-      <img src="Img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
+      <img src="img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
+      <img src="img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
     </div>
     <div class="container">
       <div class="header">

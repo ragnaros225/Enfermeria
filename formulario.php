@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detección Temprana de Anemia Infantil</title>
-    <link rel="stylesheet" href="Estilos/styles.css">
-    <link rel="stylesheet" href="Estilos/formulario-imagenes.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/formulario-imagenes.css">
 </head>
 <body>
     
     <div class="formulario-layout">
       <div class="formulario-imagenes-col imagenes-izq">
-        <img src="Img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
-        <img src="Img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
+        <img src="img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
+        <img src="img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
       </div>
       <div class="container">
         <div class="header">
@@ -25,7 +25,7 @@
                     <div class="progress-bar">
                         <div class="progress-fill" id="progressFill"></div>
                     </div>
-                    <img src="Img/nube1.png" alt="Nube" class="progress-cloud" id="progressCloud">
+                    <img src="img/nube1.png" alt="Nube" class="progress-cloud" id="progressCloud">
                 </div>
                 <div class="progress-text" id="progressText">0 de 6 preguntas respondidas</div>
             </div>
@@ -145,11 +145,11 @@
         </div>
       </div>
       <div class="formulario-imagenes-col imagenes-der">
-        <img src="Img/vacuna.png" alt="Vacuna" class="img-efecto img-vacuna">
+        <img src="img/vacuna.png" alt="Vacuna" class="img-efecto img-vacuna">
       </div>
     </div>
     
-    <script src="Js/scrip1.js"></script>
-    <script src="Js/formulario-imagenes-scrollparallax.js"></script>
+    <script src="js/scrip1.js"></script>
+    <script src="js/formulario-imagenes-scrollparallax.js"></script>
 </body>
 </html>
