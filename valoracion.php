@@ -1,7 +1,11 @@
 <?php
-$id_usuario = $_GET['id_usuario'] ?? null;
-?>
+session_start(); // Asegúrate de iniciar sesión al principio
+$id_usuario = $_SESSION['id_usuario'] ?? null;
 
+if (!$id_usuario) {
+    die("Debes iniciar sesión primero");
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +22,8 @@ $id_usuario = $_GET['id_usuario'] ?? null;
 <h2>Valoración del sitio web</h2>
 
 <form action="guardar_valoracion.php" method="post">
-  <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
+    <!-- Campo oculto con el ID de sesión -->
+    <input type="hidden" name="id_usuario" value="<?php echo htmlspecialchars($id_usuario); ?>">
 
   <label>12. ¿Qué te pareció esta página web?</label>
   <select name="opinion_pagina" required>

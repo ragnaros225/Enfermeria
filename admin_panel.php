@@ -7,11 +7,16 @@ if (!isset($_SESSION['admin'])) {
 
 include 'conexion.php';
 
+
 // Consultas
 $usuarios = $conn->query("SELECT * FROM usuarios");
 $pretest = $conn->query("SELECT * FROM pretest");
 $posttest = $conn->query("SELECT * FROM posttest");
 $valoracion = $conn->query("SELECT * FROM valoracion");
+$cuestionario = $conn->query("SELECT * FROM cuestionarios");
+$cuestionario = $conn->query("SELECT cuestionarios.*, usuarios.nombre FROM cuestionarios 
+  INNER JOIN usuarios ON cuestionarios.id_usuario = usuarios.id");
+$cuestionario2_data = $conn->query("SELECT cuestionarios2.*, usuarios.nombre FROM cuestionarios2 INNER JOIN usuarios ON cuestionarios2.id_usuario = usuarios.id");
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +36,8 @@ $valoracion = $conn->query("SELECT * FROM valoracion");
     <button class="tab-btn" onclick="showTab('pretest')">Pre-Test</button>
     <button class="tab-btn" onclick="showTab('posttest')">Post-Test</button>
     <button class="tab-btn" onclick="showTab('valoraciones')">Valoraciones</button>
+    <button class="tab-btn" onclick="showTab('cuestionario')">Cuestionario</button>
+    <button class="tab-btn" onclick="showTab('cuestionario2')">Cuestionario 2</button>
     <button class="tab-btn logout-tab" onclick="window.location.href='admin_logout.php'">Cerrar sesión</button>
   </div>
   <div class="main-content">
@@ -153,6 +160,150 @@ $valoracion = $conn->query("SELECT * FROM valoracion");
           <?php endwhile; ?>
         </table>
       </div>
+<div id="tab-cuestionario" class="tab-content" style="display:none;">
+    <h2>Resultados del Cuestionario</h2>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Respuesta 1</th>
+                <th>Respuesta 2</th>
+                <th>Respuesta 3</th>
+                <th>Respuesta 4</th>
+                <th>Respuesta 5</th>
+                <th>Respuesta 6</th>
+                <th>Respuesta 7</th>
+                <th>Respuesta 8</th>
+                <th>Respuesta 9</th>
+                <th>Nivel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $respuestas_correctas = [
+                1 => 'a',
+                2 => 'c',
+                3 => 'b',
+                4 => 'b',
+                5 => 'a',
+                6 => 'c',
+                7 => 'b',
+                8 => 'b',
+                9 => 'c'
+            ];
+
+            // Consulta única con JOIN
+            $cuestionario = $conn->query("SELECT cuestionarios.*, usuarios.nombre FROM cuestionarios 
+              INNER JOIN usuarios ON cuestionarios.id_usuario = usuarios.id");
+
+            if ($cuestionario && $cuestionario->num_rows > 0):
+                while ($row = $cuestionario->fetch_assoc()):
+                    $correctas = 0;
+                    for ($i = 1; $i <= 9; $i++) {
+                        $resp = isset($row["respuesta$i"]) ? strtolower(trim($row["respuesta$i"])) : '';
+                        if ($resp === $respuestas_correctas[$i]) {
+                            $correctas++;
+                        }
+                    }
+                    $nivel = $correctas <= 3 ? 'Bajo' : ($correctas <= 6 ? 'Medio' : 'Alto');
+            ?>
+            <tr>
+                <td><?= htmlspecialchars($row['nombre'] ?? '') ?></td>
+                <?php for ($i = 1; $i <= 9; $i++): ?>
+                    <td><?= htmlspecialchars($row["respuesta$i"] ?? '') ?></td>
+                <?php endfor; ?>
+                <td><?= $nivel ?></td>
+            </tr>
+            <?php endwhile; else: ?>
+            <tr><td colspan="11">No hay datos disponibles.</td></tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+    <!-- Nueva tabla solo para respuesta 10 -->
+    <h2 style="margin-top: 40px;">Respuestas a la Pregunta 10</h2>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Respuesta 10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $respuesta10 = $conn->query("SELECT c.respuesta10, c.created_at, u.nombre 
+                                       FROM cuestionarios c
+                                       INNER JOIN usuarios u ON c.id_usuario = u.id
+                                       WHERE c.respuesta10 IS NOT NULL");
+
+            if ($respuesta10 && $respuesta10->num_rows > 0):
+                while ($r10 = $respuesta10->fetch_assoc()):
+            ?>
+            <tr>
+                <td><?= htmlspecialchars($r10['nombre'] ?? '') ?></td>
+                <td><?= htmlspecialchars($r10['respuesta10'] ?? '') ?></td>
+            </tr>
+            <?php endwhile; else: ?>
+            <tr><td colspan="3">No hay respuestas para la pregunta 10.</td></tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
+<div id="tab-cuestionario2" class="tab-content" style="display:none;">
+    <h2>Resultados del Cuestionario 2</h2>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Respuesta 1</th>
+                <th>Respuesta 2</th>
+                <th>Respuesta 3</th>
+                <th>Respuesta 4</th>
+                <th>Respuesta 5</th>
+                <th>Respuesta 6</th>
+                <th>Respuesta 7</th>
+                <th>Respuesta 8</th>
+                <th>Respuesta 9</th>
+                <th>Nivel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $respuestas_correctas = [
+                1 => 'a',
+                2 => 'c',
+                3 => 'b',
+                4 => 'b',
+                5 => 'a',
+                6 => 'c',
+                7 => 'b',
+                8 => 'b',
+                9 => 'c'
+            ];
+
+            if ($cuestionario2_data && $cuestionario2_data->num_rows > 0):
+                while ($row = $cuestionario2_data->fetch_assoc()):
+                    $correctas = 0;
+                    for ($i = 1; $i <= 9; $i++) {
+                        $resp = isset($row["respuesta$i"]) ? strtolower(trim($row["respuesta$i"])) : '';
+                        if ($resp === $respuestas_correctas[$i]) {
+                            $correctas++;
+                        }
+                    }
+                    $nivel = $correctas <= 3 ? 'Bajo' : ($correctas <= 6 ? 'Medio' : 'Alto');
+            ?>
+            <tr>
+                <td><?= htmlspecialchars($row['nombre'] ?? '') ?></td>
+                <?php for ($i = 1; $i <= 9; $i++): ?>
+                    <td><?= htmlspecialchars($row["respuesta$i"] ?? '') ?></td>
+                <?php endfor; ?>
+                <td><?= $nivel ?></td>
+            </tr>
+            <?php endwhile; else: ?>
+            <tr><td colspan="11">No hay datos disponibles.</td></tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
     </div>
   </div>
 </body>
