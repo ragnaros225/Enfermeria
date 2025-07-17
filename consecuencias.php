@@ -1,3 +1,29 @@
+<?php
+// Inicia sesión (si no está iniciada)
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Obtiene el ID de usuario de: URL > Sesión > LocalStorage (vía JS)
+$id_usuario = $_GET['id_usuario'] ?? $_SESSION['id_usuario'] ?? null;
+
+// Si no hay ID, intenta recuperarlo vía JavaScript (solo si es necesario)
+if (!$id_usuario) {
+    echo '<script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const idFromURL = urlParams.get("id_usuario");
+        const idFromLocalStorage = localStorage.getItem("id_usuario");
+        
+        if (idFromURL || idFromLocalStorage) {
+            // Si se encuentra, recarga la página con el ID
+            window.location.href = window.location.pathname + "?id_usuario=" + (idFromURL || idFromLocalStorage);
+        }
+    </script>';
+} else {
+    // Guarda en sesión para futuras páginas
+    $_SESSION['id_usuario'] = $id_usuario;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
