@@ -8,6 +8,7 @@ if (!$id_usuario) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Cuestionario sobre Anemia</title>
@@ -16,10 +17,18 @@ if (!$id_usuario) {
   <link rel="stylesheet" href="Estilos/registro.css">
   <link rel="stylesheet" href="Estilos/preposttest.css">
 </head>
+
 <body style="background: linear-gradient(180deg, #AEE9FF 0%, #7EC8E3 60%, #B3D8F7 100%);">
   <div class="formulario-layout">
-    <div class="pretest-card-glass">
-      <h1 class="pretest-title">Cuestionario sobre Anemia Infantil</h1>
+    <div class="formulario-imagenes-col imagenes-izq">
+      <img src="Img/estetoscopio.png" alt="Estetoscopio" class="img-efecto img-estetoscopio">
+      <img src="Img/frasco.png" alt="Frasco" class="img-efecto img-frasco">
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>Cuestionario sobre Anemia Infantil</h1>
+        <p>Responde las siguientes preguntas para identificar posibles señales de anemia en tu hijo(a)</p>
+      </div>
       <form action="guardar_cuestionario.php" method="post">
         <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
 
@@ -39,13 +48,13 @@ if (!$id_usuario) {
 
         $numero = 1;
         foreach ($preguntas as $texto => $opciones) {
-          echo "<div class='question'>";
-          echo "<div class='question-text'><span class='question-number'>$numero</span> $texto</div>";
-          echo "<div class='options'><select name='respuesta$numero' required>";
+          echo "<div class='question' style='margin-bottom: 32px;'>";
+          echo "<div class='question-text' style='margin-bottom: 12px;'><span class='question-number'>$numero</span> $texto</div>";
+          echo "<div class='options' style='margin-top: 10px;'><div class='custom-select'><select name='respuesta$numero' required tabindex='0'>";
           foreach ($opciones as $op) {
             echo "<option value=\"$op\">$op</option>";
           }
-          echo "</select></div></div>";
+          echo "</select></div></div></div>";
           $numero++;
         }
         ?>
@@ -55,4 +64,6 @@ if (!$id_usuario) {
     </div>
   </div>
 </body>
+<script src="Js/custom-select.js"></script>
+
 </html>
