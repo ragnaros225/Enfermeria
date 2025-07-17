@@ -51,7 +51,7 @@
   <!-- Librería PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
   <script src="js/libro.js"></script>
-  <script src="Js/posttest-button.js"></script>
+  <script src="js/posttest-button.js"></script>
 </body>
 
 </html>
