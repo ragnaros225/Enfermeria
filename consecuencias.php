@@ -16,7 +16,7 @@
     <div class="container">
       <header style="text-align:center; margin-bottom:2rem;">
         <h1 style="margin-bottom:0.5em;">Recetas para prevenir la anemia</h1>
-        <p>Aquí encontrarás recursos y fuentes confiables para mejorar tu alimentación y prevenir la anemia.</p>
+        <p>Aquí encontrarás recursos y fuentes confiables para mejorar tu alimentación y prevenir la anemia en su hijo.</p>
       </header>
       <section class="card" aria-labelledby="pdf-title">
         <h2 id="pdf-title">Guía visual interactiva</h2>
